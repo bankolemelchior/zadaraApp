@@ -1,0 +1,16 @@
+const http = require('http');
+const app = require('../index'); //initialisation de express
+const server = http.Server(app); // création d'un serveur http à partir de l'application express
+const io = require('socket.io')(server); //Créer une instance de socket.io en lui passant le serveur http
+
+const port = 9000;
+
+
+
+
+server.listen(port, () => {
+    console.log('Server started on port 9000 ✅');
+})
+
+
+module.exports = io; // exportation de l'instance de socket.io pour l'utiliser dans d'autres fichiers

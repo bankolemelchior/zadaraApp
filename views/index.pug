@@ -1,0 +1,30 @@
+html(lang="fr-FR")
+    head
+        meta(charset="UTF-8")
+        meta(http-equiv="X-UA-Compatible", content="IE=edge")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        title Node.js App
+        //- link(rel='stylesheet', href='/css/tailwind.css')
+        link(rel='stylesheet', href='./css/styles.css')
+    body
+        div#chat-container
+            div.container
+                h1 Bienvenue sur Zada Chat !
+            div#chat-room
+                ul#room-list
+                    div#room-form
+                        input#room-input(type="text" placeholder="Créez votre salon")
+                        button#room-btn(type="submit") Créer
+                        li#room1 Game gang
+                        li#room2 Code gang
+                        li#room3 Music gang
+                        li#room4 Movie gang
+                        li#room5 Food gang
+                div#chat-window
+                    div#chat-messages
+                    div#chat-form
+                        input#message(type="text" placeholder="Ton message ici ...")
+                        button#send-btn(type="submit") Envoyer
+    
+        script(src="/socket.io/socket.io.js") 
+        script(src="./scripts/app.js")
